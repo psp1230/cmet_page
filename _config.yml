@@ -1,4 +1,4 @@
 theme: jekyll-theme-time-machine
-redirects:
-    redirect_to: index.html
-    try_files: true
+# redirects:
+#     redirect_to: index.html
+#     try_files: true
