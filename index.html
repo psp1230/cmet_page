@@ -45,6 +45,25 @@
     <link href="/cmet_page/js/chunk-vendors.e7d30231.js" rel="preload" as="script">
     <link href="/cmet_page/css/chunk-vendors.b583ce33.css" rel="stylesheet">
     <link href="/cmet_page/css/app.384cbe7a.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        (function (l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function (v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null,
+                        l.pathname.slice(0, -1) + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location))
+    </script>
 </head>
 
 <body><noscript><strong>We're sorry but cmet doesn't work properly without JavaScript enabled. Please enable it to
